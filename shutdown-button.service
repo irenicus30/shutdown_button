@@ -1,0 +1,10 @@
+[Unit]
+Description=Shutdown at pin 21 level rising
+
+[Service]
+ExecStartPre=/bin/sleep 60
+ExecStart=/home/ubuntu/scripts/myenv/bin/python /home/ubuntu/scripts/shutdown.py
+
+[Install]
+WantedBy=default.target
+
